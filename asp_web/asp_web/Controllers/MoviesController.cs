@@ -14,7 +14,7 @@ namespace asp_web.Controllers
         {
             return View();
         }
-        public JsonResult list()
+        public JsonResult JsonList()
         {
 
             MoviesDAO.loadJson();

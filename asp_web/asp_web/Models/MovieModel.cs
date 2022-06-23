@@ -7,5 +7,7 @@
         public string title { get; set; }
 
         public string url { get; set; }
+
+        public List<SubtitleModel> subtitles { get; set; }
     }
 }
