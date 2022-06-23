@@ -84,6 +84,8 @@ $(document).ready(function(){
 		//return;
 		
 	}*/
+
+	storageInit();
 	
 	$.get(`${localStorage.getItem("server")}movielist.json`, function(data, status){
 		var id = 0;
@@ -93,7 +95,7 @@ $(document).ready(function(){
 			var li = document.createElement(li);
     		var div = document.createElement(div);
 			console.log( data[index].title );
-			$("ul[data-role='listview']").append(`<li id="li${id}" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a id="id${id}" href="javascript:showMovie(${data[index].id})" style="box-shadow:0 0;" class="ui-link-inherit">${data[index].title}</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>`);
+			$("ul[data-role='listview']").append(`<li id="li${id}" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a id="id${id}" href="javascript:showMovie(${data[index].id})" style="box-shadow:0 0;" class="ui-link-inherit transition-animation">${data[index].title}</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>`);
 			id = id+1;
 		});
 
