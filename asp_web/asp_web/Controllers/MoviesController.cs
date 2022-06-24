@@ -14,6 +14,12 @@ namespace asp_web.Controllers
         {
             return View();
         }
+
+        public IActionResult List()
+        {
+            return View(MoviesDAO.getList());
+        }
+
         public JsonResult JsonList()
         {
 
